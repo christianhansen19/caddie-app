@@ -9,7 +9,7 @@ const items = [
 export function BottomNav() {
   return (
     <nav
-      className="shrink-0 bg-white/95 backdrop-blur border-t border-fairway-100"
+      className="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur border-t border-fairway-100 z-30"
       style={{ paddingBottom: 'var(--safe-bottom)' }}
     >
       <ul className="grid grid-cols-3 max-w-md mx-auto">

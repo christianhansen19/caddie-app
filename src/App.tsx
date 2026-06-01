@@ -44,24 +44,22 @@ function AppShell() {
   }
 
   return (
-    <div className="h-full flex flex-col" style={{ paddingTop: 'var(--safe-top)' }}>
-      <main className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
-        <Routes>
-          <Route path="/" element={<CaddiePage clubs={clubs} settings={settings} />} />
-          <Route path="/range" element={<RangePage uid={user.uid} clubs={clubs} />} />
-          <Route
-            path="/range/:clubId"
-            element={<ClubDetailPage uid={user.uid} clubs={clubs} />}
-          />
-          <Route
-            path="/settings"
-            element={
-              <SettingsPage uid={user.uid} user={user} clubs={clubs} settings={settings} />
-            }
-          />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
+    <div className="min-h-full" style={{ paddingTop: 'var(--safe-top)' }}>
+      <Routes>
+        <Route path="/" element={<CaddiePage clubs={clubs} settings={settings} />} />
+        <Route path="/range" element={<RangePage uid={user.uid} clubs={clubs} />} />
+        <Route
+          path="/range/:clubId"
+          element={<ClubDetailPage uid={user.uid} clubs={clubs} />}
+        />
+        <Route
+          path="/settings"
+          element={
+            <SettingsPage uid={user.uid} user={user} clubs={clubs} settings={settings} />
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <BottomNav />
     </div>
   );

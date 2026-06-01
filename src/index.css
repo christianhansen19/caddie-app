@@ -14,15 +14,10 @@ body,
   height: 100%;
 }
 
-html,
-body {
-  overflow: hidden; /* page-level scroll is handled by the inner <main>, so the nav never moves */
-}
-
 body {
   @apply bg-cream text-fairway-900 font-display antialiased;
   -webkit-tap-highlight-color: transparent;
-  overscroll-behavior-y: none;
+  overscroll-behavior-y: contain;
 }
 
 /* Hide number input spinners on mobile/desktop */
