@@ -21,7 +21,7 @@ export function CaddiePage({ clubs, settings }: Props) {
   const hasData = clubs.some((c) => c.shots.length > 0);
 
   return (
-    <div className="flex flex-col gap-5 px-4 pt-6 pb-32 max-w-md mx-auto">
+    <div className="flex flex-col gap-5 px-4 pt-6 pb-8 max-w-md mx-auto">
       <header className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-fairway-900">Caddie</h1>
         <span className="text-xs text-fairway-700/60 uppercase tracking-wider font-semibold">

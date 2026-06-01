@@ -19,7 +19,7 @@ export function ClubDetailPage({ uid, clubs }: Props) {
 
   if (!club) {
     return (
-      <div className="px-4 pt-6 pb-32 max-w-md mx-auto">
+      <div className="px-4 pt-6 pb-8 max-w-md mx-auto">
         <Link to="/range" className="btn-ghost">
           ← Back
         </Link>
@@ -57,7 +57,7 @@ export function ClubDetailPage({ uid, clubs }: Props) {
   }
 
   return (
-    <div className="px-4 pt-6 pb-32 max-w-md mx-auto flex flex-col gap-4">
+    <div className="px-4 pt-6 pb-8 max-w-md mx-auto flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <Link to="/range" className="btn-ghost !px-2">
           ← Back

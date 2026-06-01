@@ -13,7 +13,7 @@ type Props = {
 
 export function SettingsPage({ uid, user, clubs, settings }: Props) {
   return (
-    <div className="px-4 pt-6 pb-32 max-w-md mx-auto flex flex-col gap-4">
+    <div className="px-4 pt-6 pb-8 max-w-md mx-auto flex flex-col gap-4">
       <header>
         <h1 className="text-2xl font-bold text-fairway-900">Settings</h1>
       </header>
