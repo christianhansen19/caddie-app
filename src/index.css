@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-cream text-fairway-900 font-display antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: contain;
+}
+
+/* Hide number input spinners on mobile/desktop */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-2xl font-semibold transition-colors select-none active:scale-[0.98];
+    min-height: 44px;
+  }
+  .btn-primary {
+    @apply btn bg-fairway-500 text-white hover:bg-fairway-600 px-5 py-3 shadow-card;
+  }
+  .btn-secondary {
+    @apply btn bg-fairway-50 text-fairway-800 hover:bg-fairway-100 px-5 py-3 border border-fairway-100;
+  }
+  .btn-ghost {
+    @apply btn text-fairway-700 hover:bg-fairway-50 px-4 py-2;
+  }
+  .card {
+    @apply bg-white rounded-3xl shadow-card border border-fairway-50;
+  }
+  .chip {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold bg-fairway-50 text-fairway-800 border border-fairway-100 active:scale-95 transition;
+    min-height: 40px;
+  }
+  .pill {
+    @apply inline-flex items-center justify-center rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide;
+  }
+}
